@@ -15,9 +15,9 @@ Start traffic
 Stop traffic
     Stop_traf
 Compare_response
-#    Compare_response
-    Do_attach
-    Should Be Equal  ${response}   UE-1 already attached.
+
+    ${stringToCompare}  RESPONSE_COMPARATOR  ${}
+    Should Be Equal  ${stringToCompare}  ${response}
 
 *** Keywords ***
 Do_attach
@@ -28,5 +28,5 @@ Start_traf
     start_traffic  1  100  1
 Stop_traf
     stop_traffic  1  1
-Compare_response
+
 

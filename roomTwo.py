@@ -58,15 +58,3 @@ def compare_response(expected, actual):
     response = conn.read_all().decode()
     return response
 
-    # if (attach == "UE-1 already attached."):
-    #     return True
-    # else:
-    #     return False
-#
-#
-# conn = T("na-robot.ddns.net", 8010)
-# conn.write('attach  ue=1 cell=1'.encode())
-# response = conn.read_all().decode()
-# print(response)
-
-
