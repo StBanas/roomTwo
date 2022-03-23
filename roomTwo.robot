@@ -4,7 +4,7 @@ Library  roomTwo.py
 
 *** Variables ***
 ${positive_response} =  UE-1 on cell=1 attached successful.
-${negative_response} =  Cell-4 is not supported by the eNB.
+${negative_response} =  Cell-5 is not supported by the eNB.
 
 *** Test Cases ***
 Do attach
@@ -20,7 +20,7 @@ Compare_positive_response
     Should Be Equal As Strings  ${stringToCompare}  ${positive_response}
 Compare_negative_response
     ${stringToCompare}  NEGATIVE_RESPONSE_COMPARATOR
-    Should Not Be Equal As Strings  ${stringToCompare}  ${negative_response}
+    Should Be Equal As Strings  ${stringToCompare}  ${negative_response}
 
 *** Keywords ***
 Do_attach

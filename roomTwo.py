@@ -1,7 +1,6 @@
 from telnetlib import Telnet as T
 from robot.api.deco import keyword
 
-
 def attach(ue, cell):
     address = "na-robot.ddns.net"
     port = 8012
@@ -59,7 +58,7 @@ def compare_positive_response():
 @keyword("NEGATIVE_RESPONSE_COMPARATOR")
 def compare_negative_response():
     conn = T("na-robot.ddns.net", 8012)
-    conn.write("attach  ue=1 cell=1".encode())
+    conn.write("attach  ue=2 cell=5".encode())
     response = conn.read_all().decode()
     print(response)
     return response
